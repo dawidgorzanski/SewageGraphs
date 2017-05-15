@@ -51,7 +51,8 @@ namespace SewageGraphs
 
         private void btnFindMaxFlow_Click(object sender, RoutedEventArgs e)
         {
-            //DLA RADZIA
+            int value = FordFulkerson.MaxFlow(draw.CurrentGraph.ToMatrix(), draw.CurrentGraph.Nodes.Count);
+            MessageBox.Show("Maksymalna przepustowość sieci to "+value);
         }
     }
 }

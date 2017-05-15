@@ -127,6 +127,7 @@
   <ItemGroup>
     <Compile Include="Model\Connection.cs" />
     <Compile Include="Model\DrawGraph.cs" />
+    <Compile Include="Model\FordFulkerson.cs" />
     <Compile Include="Model\Graph.cs" />
     <Compile Include="Model\GraphCreator.cs" />
     <Compile Include="Model\Node.cs" />
