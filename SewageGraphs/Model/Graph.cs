@@ -49,6 +49,16 @@ namespace SewageGraphs.Model
         {
             _connections.Add(new Connection() { Node1 = node1, Node2 = node2, Weight = weight });
         }
-
+        public int[,] ToMatrix()
+        {
+            int Dimension = _nodes.Count;
+            int[,] Matrix = new int[Dimension, Dimension];
+            for (int i = 0; i < _connections.Count; i++)
+            {
+                Matrix[_connections[i].Node1.ID, _connections[i].Node2.ID] = _connections[i].Weight;
+                //Matrix[_connections[i].Node2.ID, _connections[i].Node1.ID] = 1;
+            }
+            return Matrix;
+        }
     }
 }
